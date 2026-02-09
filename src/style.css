@@ -1,11 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --main-blue: #00acdc;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
@@ -15,7 +18,6 @@ body {
   align-items: center;
   padding: 0 50px;
   background-color: white;
-  height: 60px;
 }
 
 .logo {
@@ -31,8 +33,6 @@ body {
 .nav__list {
   display: flex;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .nav__item {
@@ -46,16 +46,20 @@ body {
 .nav__link {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 60px;
   font-size: 12px;
   text-decoration: none;
-  color: black;
+  color: #000;
   text-transform: uppercase;
   position: relative;
   transition: color 0.3s ease;
 }
 
-.nav__link:hover,
+.nav__link:hover {
+  color: var(--main-blue);
+}
+
 .nav__link.is-active {
   color: var(--main-blue);
 }
