@@ -1,74 +1,72 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
-
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-ul {
-  list-style: none;
   padding: 0;
-  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
 }
 
-a {
-  text-decoration: none;
-}
-
-.navigation__wraper {
+.header {
   display: flex;
-  padding: 0 50px;
-  justify-content: space-between;
   align-items: center;
+  padding: 0 50px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.navigation__logo {
-  align-self: center;
-  justify-content: center;
+.logo {
+  display: block;
+  margin-right: 243px;
+}
+
+.logo img {
+  display: block;
+  width: 40px;
   height: 40px;
 }
 
-.navigation__list {
+.nav__list {
   display: flex;
+  list-style: none;
 }
 
-.navigation__item:not(:first-child) {
-  margin-left: 20px;
+.nav__item {
+  margin-right: 20px;
 }
 
-.navigation__link {
+.nav__item:last-child {
+  margin-right: 0;
+}
+
+.nav__link {
+  display: block;
+  height: 60px;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
+  line-height: 60px;
   text-align: center;
-  display: flex;
-  align-items: center;
-  color: #000;
-  height: 60px;
-}
-
-.navigation__link:hover {
-  color: #00acdc;
-}
-
-.navigation__link:active {
-  color: #00acdc;
-  box-shadow: 0 4px 0 #00acdc;
-}
-
-.is-active {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
   position: relative;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
   color: #00acdc;
 }
 
-.is-active::after {
+.nav__link.is-active {
+  color: #00acdc;
+}
+
+.nav__link.is-active::after {
   content: "";
   position: absolute;
-  bottom: 0;
   left: 0;
-  height: 4px;
+  bottom: 0;
   width: 100%;
-  background-color: #00acdc;
-  border-radius: 8px;
+  height: 3px;
+  background: #00acdc;
 }
